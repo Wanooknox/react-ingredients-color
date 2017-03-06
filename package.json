@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start":"watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js"
+    "start": "electron .",
+    "build": "browserify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "electron": "^1.6.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "watchify": "^3.7.0"
